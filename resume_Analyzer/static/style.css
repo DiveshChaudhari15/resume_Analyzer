@@ -1,0 +1,292 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Overlay for Background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ff6347;
+}
+
+/* Container Styling */
+.container {
+  margin-top: 100px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h1 span {
+  color: #ff6347;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Section Heading Styling */
+h2 {
+  font-size: 28px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff6347;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+form input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e0533d;
+}
+
+/* Resume Analysis Section */
+.analysis-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#response {
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+#result-graph {
+  margin: 20px auto;
+  display: none;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+#score span {
+  color: #ff6347;
+  font-size: 26px;
+}
+
+/* Contact Section */
+#contact-section {
+  background-color: #333;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#contact-section h2 {
+  color: #ff6347;
+  margin-bottom: 15px;
+}
+
+#contact-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#contact-section a {
+  color: #ff6347;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 2px solid #444;
+ 
+}
+
+footer p {
+  margin: 0;
+  color: #ccc;
+ ;
+
+}
+
+footer p a {
+  color: #ff6347;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navbar-links li {
+    margin: 5px 0;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  form input[type="file"] {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #score {
+    font-size: 20px;
+  }
+}
